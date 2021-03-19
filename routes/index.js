@@ -1,9 +1,45 @@
 var express = require('express');
 var router = express.Router();
+let article = require('../custom_modules/article.js');
+let course = require('../custom_modules/course.js');
+let form = require('../custom_modules/form.js');
 
-/* GET home page. */
+
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Home' });
 });
+
+router.get('/course', function(req, res, next) {
+  res.render('course', { title: 'Our courses', course:course.allCourse });
+});
+
+router.get('/course/:id', function(req, res, next) {
+  res.render('course', { course: course.getCourseById(req.params.id) });
+});
+
+router.get('/mongo', function(req, res, next) {
+  res.render('mongo', { title: 'Mongo courses', course:course.allCourse });
+});
+
+router.get('/node', function(req, res, next) {
+  res.render('node', { title: 'Node courses', course:course.allCourse });
+});
+
+router.get('/blog', function(req, res, next) {
+  res.render('blog', { title: 'Blog', article:article.allArticle });
+});
+
+router.get('/blog/:id', function(req, res, next) {
+  res.render('article', { article:articles.getArticleById(req.params.id) });
+});
+
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: 'Contact us' });
+});
+
+router.post('/contact', function(req, res, next) {
+  console.log(req.body);
+});
+
 
 module.exports = router;
