@@ -30,7 +30,7 @@ router.get('/blog', function(req, res, next) {
 });
 
 router.get('/blog/:id', function(req, res, next) {
-  res.render('article', { article:articles.getArticleById(req.params.id) });
+  res.render('article', { article:article.getArticleById(req.params.id) });
 });
 
 router.get('/contact', function(req, res, next) {
