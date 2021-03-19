@@ -14,7 +14,7 @@ router.get('/course', function(req, res, next) {
 });
 
 router.get('/course/:id', function(req, res, next) {
-  res.render('course', { course: course.getCourseById(req.params.id) });
+  res.render('eachcourse', { course: course.getCourseById(req.params.id) });
 });
 
 router.get('/mongo', function(req, res, next) {
