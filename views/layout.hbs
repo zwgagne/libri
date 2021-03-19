@@ -5,6 +5,20 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <h1>{{title}}</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/course">Our courses</a>
+        <ul>
+          <li><a href="/mongo"></a>Mongo courses</li>
+          <li><a href="/node">Node courses</a></li>
+        </ul>
+        </li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact us</a></li>
+      </ul>
+    </nav>
     {{{body}}}
   </body>
 </html>
