@@ -38,6 +38,10 @@ router.get('/contact', function(req, res, next) {
 });
 
 router.post('/contact', function(req, res, next) {
+  let temp = form.addForm(req.body);
+    if(temp){
+      res.render('send')
+    }
   console.log(req.body);
 });
 

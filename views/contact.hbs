@@ -1,25 +1,25 @@
 <form action="/contact">
     <label for="lastname">Lastname</label>
-    <input type="text" name="nom">
+    <input type="text" name="lastname" required"" oninvalid="this.setCustomValidity('Enter a lastname')" oninput="setCustomValidity('')">
 <br>
     <label for="firstname">Firstname</label>
-    <input type="text" name="firstname">
+    <input type="text" name="firstname" required"" oninvalid="this.setCustomValidity('Enter a firstname')" oninput="setCustomValidity('')">
 <br>
     <label for="email">Email</label>
-    <input type="text" name="email">
+    <input type="text" name="email" required"" oninvalid="this.setCustomValidity('Enter a email')" oninput="setCustomValidity('')">
 <br>
     <label for="phonenumber">Phone number</label>
-    <input type="text" name="phonenumber">
+    <input type="text" name="phonenumber" required"" oninvalid="this.setCustomValidity('Enter a phonenumber')" oninput="setCustomValidity('')">
 <br>
 <br>
     <label for="subject">What's your request about?</label>
     <br>
-    <select name="subject" id="subject">
+    <select name="subject" id="subject" required"" oninvalid="this.setCustomValidity('Choose a subject)" oninput="setCustomValidity('')">
         <option value="subscribe">Subscribe</option>
         <option value="ask">Ask for a course</option>
     </select>
     <br>
-    <textarea name="request" id="request" cols="40" rows="10"></textarea>
+    <textarea name="request" id="request" cols="40" rows="10" required"" oninvalid="this.setCustomValidity('Enter your request')" oninput="setCustomValidity('')"></textarea>
     <br>
     <input type="submit" id="submit" value="Submit">
 </form>
